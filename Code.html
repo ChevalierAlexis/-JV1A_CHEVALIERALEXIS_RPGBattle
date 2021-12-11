@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<style>
+body {
+margin:0;
+}
+
+#Bas{
+    display: flex;
+    align-items:flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start, space-evenly;
+    background-color: #000785;
+    color: #FFFFFF;
+    margin:0;
+    width: 100%;
+    
+}
+
+#Sprite{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:aqua;  
+    background-image : url("Ressources/Desert.png");
+    background-repeat: repeat-x
+}
+
+#Ennemi{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: blue;
+    margin-right: 70%;   
+}
+
+#Persos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 2%;
+}
+
+.Infos{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#Actions{
+    position: absolute;
+    left:5%;
+    border:solid;
+    background-color: #000785;
+    display:none;
+}
+
+.Sprites{
+    margin-left : 250px;
+}
+
+#boxbas{
+    display: flex;
+    align-items:flex-end;
+    width: 100%;
+}
+
+#Persojoue{
+width: 10%;
+display:none;}
+
+#texte{
+position: absolute;
+top : 0%;
+left: 50%;}
+
+</style>
+<script src="Code.js" async></script>
+
+
+<html>
+<body>
+
+<div id="Sprite">
+    <div id="affichage">
+        <h2 id="texte">truc</h2>
+    </div>
+    <div class="Sprites" id="Persos">
+        <img src="Ressources/Vector/Char léger.png" alt="Char leger">
+        <img src="Ressources/Vector/Char Moyen.png" alt="Char moyen">
+        <img src="Ressources/Vector/Char lourd.png" alt="Char lourd">
+        <img src="Ressources/Vector/Chasseur de char.png" alt="TD">
+    </div>
+
+    <div class="Sprites" id="Ennemi">
+        <img src="Ressources/wholetank/key-frames/right/right-1.png" alt="Gros tank 1">
+        <img src="Ressources/wholetank/key-frames/right/right-2.png" alt="Gros tank 2">
+        <img src="Ressources/wholetank/key-frames/right/right-3.png" alt="Gros tank 3">
+    </div>
+</div>
+
+<div id="Bas">
+    <div class="Infos" id="Persojoue">
+        <img src="Ressources/arrow.gif" alt="Fleche" id="fleche0">
+        <img src="Ressources/arrow.gif" alt="Fleche" id="fleche1">
+        <img src="Ressources/arrow.gif" alt="Fleche" id="fleche2">
+        <img src="Ressources/arrow.gif" alt="Fleche" id="fleche3">
+    </div>
+    
+    <div class="Infos" id="Personnages">
+        <h3>Char leger</h3>
+        <h3>Char moyen</h3>
+        <h3>Char lourd</h3>
+        <h3>Chasseur de char</h3>
+    </div>
+    
+    <div class="Infos" id="Statut">
+        <img src="https://opengameart.org/sites/default/files/styles/medium/public/heart_7.png" alt="Coeur">
+        <img src="https://opengameart.org/sites/default/files/styles/medium/public/heart_7.png" alt="Coeur">
+        <img src="https://opengameart.org/sites/default/files/styles/medium/public/heart_7.png" alt="Coeur">
+        <img src="https://opengameart.org/sites/default/files/styles/medium/public/heart_7.png" alt="Coeur">
+    </div>
+    
+    <div class="Infos" id="PV">
+        <h3>PV</h3>
+        <h3>PV</h3>
+        <h3>PV</h3>
+        <h3>PV</h3>
+    </div>
+
+    <div class="Infos" id="barvie">
+        <progress id ="barre" value="70" max="100">70 %</progress>
+        <progress value="70" max="100">70 %</progress>
+        <progress value="70" max="100">70 %</progress>
+        <progress value="70" max="100">70 %</progress>
+
+    </div>
+    
+    <div class="Infos" id="PV">
+        <h3>HP 1900</h3>
+        <h3>HP 1828</h3>
+        <h3>HP 1300</h3>
+        <h3>HP 1347</h3>
+    </div>
+
+    <div class="Infos" id="PM">
+        <h3>PM 59</h3>
+        <h3>PM 89</h3>
+        <h3>PM 72</h3>
+        <h3>PM 13</h3>
+    </div>
+    <div class="Infos" id="Actions">
+        <input type="button" value="Attaque" id="btnAtt" onclick="attaque()">
+        <input type="button" value="Défense" id="btnDef" onclick="defense()">
+        <input type="button" value="Spécial" id="btnSpe" onclick="special()">
+    </div>
+    
+    <input type="button" value="Commencer" id="lancer">
+
+</div>
+</body>
+</html>
