@@ -85,7 +85,8 @@ left: 50%;}
 
 <div id="Sprite">
     <div id="affichage">
-        <h2 id="texte">truc</h2>
+        <h2 id="texte">Cliquez sur "Nouveau Tour", puis cliquez sur "Commencer" pour chaque tour de personnage.</h2>
+        <h2>Une fois la riposte finie cliquez sur "Nouveau Tour" et ainsi de suite.</h2>
     </div>
     <div class="Sprites" id="Persos">
         <img src="Ressources/Vector/Char léger.png" alt="Char leger">
@@ -95,9 +96,9 @@ left: 50%;}
     </div>
 
     <div class="Sprites" id="Ennemi">
-        <img src="Ressources/wholetank/key-frames/right/right-1.png" alt="Gros tank 1">
-        <img src="Ressources/wholetank/key-frames/right/right-2.png" alt="Gros tank 2">
-        <img src="Ressources/wholetank/key-frames/right/right-3.png" alt="Gros tank 3">
+        <img src="Ressources/wholetank/key-frames/right/right-1.png" alt="Gros tank 1" id="ennemi1">
+        <img src="Ressources/wholetank/key-frames/right/right-2.png" alt="Gros tank 2" id="ennemi2">
+        <img src="Ressources/wholetank/key-frames/right/right-3.png" alt="Gros tank 3" id="ennemi3">
     </div>
 </div>
 
@@ -124,10 +125,10 @@ left: 50%;}
     </div>
     
     <div class="Infos" id="PV">
-        <h3>PV</h3>
-        <h3>PV</h3>
-        <h3>PV</h3>
-        <h3>PV</h3>
+        <h3 id="pv0">75 PV</h3>
+        <h3 id="pv1">90 PV</h3>
+        <h3 id="pv2">110 PV</h3>
+        <h3 id="pv3">85 PV</h3>
     </div>
 
     <div class="Infos" id="barvie">
@@ -136,13 +137,6 @@ left: 50%;}
         <progress value="70" max="100">70 %</progress>
         <progress value="70" max="100">70 %</progress>
 
-    </div>
-    
-    <div class="Infos" id="PV">
-        <h3>HP 1900</h3>
-        <h3>HP 1828</h3>
-        <h3>HP 1300</h3>
-        <h3>HP 1347</h3>
     </div>
 
     <div class="Infos" id="PM">
@@ -158,6 +152,7 @@ left: 50%;}
     </div>
     
     <input type="button" value="Commencer" id="lancer">
+    <input type="button" value="Nouveau tour" id="tour">
 
 </div>
 </body>
